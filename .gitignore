@@ -1,0 +1,7 @@
+.Rhistory
+*~
+*.log
+*.synctex*
+*.aux
+literature_identification/IPCC*
+*.ipynb_checkpoints*
