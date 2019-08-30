@@ -32,7 +32,11 @@ notfound = 0
 doi_list = []
 no_doi_list = []
 
-cat = Category.objects.get(pk=319)
+cat, created = Category.objects.get_or_create(
+    project = p,
+    name = "not included in table",
+    description = "not included in table"
+)
 
 for e in bib_database.entries:
     d = None
@@ -43,7 +47,7 @@ for e in bib_database.entries:
             pass
     if d is None:
         try:
-            d = Doc.objects.get(title__iexact=e['title'].strip('{} '), PY=e['year'])
+            d = Doc.objects.get(tslug=Doc.make_tslug(e['title']), PY=e['year'])
         except:
             pass
     if d is not None:
