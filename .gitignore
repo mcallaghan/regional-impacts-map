@@ -1,4 +1,7 @@
-
+analysis/cache_dir/*
+analysis/outputs/*
+analysis/runs/*
+literature_identification/jupyter-google*
 *~lock*
 data/*
 WGIIAR5-Chap18_FINAL.pdf
