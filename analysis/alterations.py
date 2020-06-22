@@ -32,3 +32,24 @@ df.loc[df['id']==561026,'4 - 02 Air or land surface temperature changes'] = 0
 df.loc[df['id']==561026,'6 - 02 Air or land surface temperature changes'] = 1
 df.loc[df['id']==561026,'4 - 66 Health'] = 1
 #df.loc[df['id']==,] =
+
+
+#
+df.loc[df['id']==2146364,'6 - 77 Land use change'] = 0
+df.loc[df['id']==2146364,'6 - 58 Pests and diseases'] = 0
+df.loc[df['id']==2146364,'6 - 51 Distribution and range shifts (Terrestrial and freshwater)'] = 0
+
+#
+df.loc[df['id']==1300494,'6 - 02 Air or land surface temperature changes'] = 1
+
+
+#
+df.loc[df['id']==1486581,'6 - 51 Distribution and range shifts (Terrestrial and freshwater)'] = 0
+df.loc[df['id']==1486581,'4 - 51 Distribution and range shifts (Terrestrial and freshwater)'] = 1
+df.loc[df['id']==1486581,'6 - 28 River runoff'] = 0
+
+
+#
+df.loc[df['id']==75669,'6 - 02 Air or land surface temperature changes'] = 1
+df.loc[df['id']==75669,'6 - 05 Changes in precipitation'] = 1
+df.loc[df['id']==75669,'6 - 25 Evapotranspiration'] = 1
