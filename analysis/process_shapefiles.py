@@ -60,24 +60,25 @@ def match_shp_da(shpfile, ndf, shpfile_name, shp_ndf_df):
 
             shp_ndf.append({"shpfile_name": shpfile_name, "shpfile_id": i, "ndf_id": da_df.index[0]})
 
+        else:
 
-        ndf_ids = []
-        for point in idx:
-            lon = ndf.LON.unique()[point[0]]
-            lat = ndf.LAT.unique()[point[1]]
-            da_df = ndf[(ndf['LON']==lon) & (ndf['LAT']==lat)]
+            ndf_ids = []
+            for point in idx:
+                lon = ndf.LON.unique()[point[0]]
+                lat = ndf.LAT.unique()[point[1]]
+                da_df = ndf[(ndf['LON']==lon) & (ndf['LAT']==lat)]
 
-            shp_ndf.append({"shpfile_name": shpfile_name, "shpfile_id": i, "ndf_id": da_df.index[0]})
+                shp_ndf.append({"shpfile_name": shpfile_name, "shpfile_id": i, "ndf_id": da_df.index[0]})
 
-            ndf_ids.append(da_df.index[0])
+                ndf_ids.append(da_df.index[0])
 
-            da_cat = da_df['da_cat']
+                da_cat = da_df['da_cat']
 
-            if abs(da_cat.values[0]) > 1:
-                n_attributable_trend +=1
+                if abs(da_cat.values[0]) > 1:
+                    n_attributable_trend +=1
 
-            if not np.isnan(da_cat.values[0]):
-                notna_cells +=1
+                if not np.isnan(da_cat.values[0]):
+                    notna_cells +=1
 
         shpfile.loc[i,'gridcells'] = ndots
         shpfile.loc[i,'da_trend_cells'] = n_attributable_trend
@@ -95,10 +96,13 @@ df = pd.read_csv('../data/category_predictions.csv')
 places = pd.read_csv('../data/place_df.csv')
 places = places.drop_duplicates(["doc_id","geonameid"])
 
-for variable in ['6 - Temperature - upper_pred','6 - Precipitation - upper_pred']:
+for variable in ['6 - Temperature - upper_pred','6 - Precipitation - upper_pred',"all"]:
     print(f"merging data for {variable}")
-    var_df = df[df[variable]>0.5]
-    df_places = pd.merge(var_df,places,left_on="id",right_on="doc_id")
+
+    df = pd.read_csv('../data/category_predictions.csv')
+    if variable != "all":
+        df = df[df[variable]>0.5]
+    df_places = pd.merge(df,places,left_on="id",right_on="doc_id")
 
     if "Precipitation" in variable:
         da_degrees=2.5
@@ -134,7 +138,7 @@ for variable in ['6 - Temperature - upper_pred','6 - Precipitation - upper_pred'
 
         da_dataset = da_dataset.reset_index().rename(columns={"LON37_108": "LON"})
 
-    for degrees in [2.5, 1, .25]:
+    for degrees in [2.5, 1]:#, .25]:
         t0 = time.time()
         print(f"merging datasets for a grid with {degrees} degree cells")
         LON = np.linspace(-180+degrees*0.5,180-degrees*0.5,int(360/degrees))
@@ -250,9 +254,6 @@ for variable in ['6 - Temperature - upper_pred','6 - Precipitation - upper_pred'
         geography.loc[(geography["featurecla"]=="Plain") & (geography["name"].str.contains("gange", case=False)),"name"] = "Gangetic Plain"
         geography.loc[(geography["featurecla"]=="Plain") & (geography["name"].str.contains("north china", case=False)),"name"] = "Huanghuai Pingyuan"
 
-        df = df.loc[
-            (df[variable]>0.5)
-        ]
 
         # A list of combinations of studies and gridcells
         df_ndf = pd.DataFrame({"ndf_id": [], "doc_id": []})
@@ -277,7 +278,7 @@ for variable in ['6 - Temperature - upper_pred','6 - Precipitation - upper_pred'
             print(f"matching {key} features")
 
             # Get the study places with this type of feature
-            sub_df = df_places[df_places["feature_code"]==key]
+            sub_df = df_places.loc[df_places["feature_code"]==key]
 
             # Cycle through each place name
             for name, group in sub_df.groupby('place_name'):
@@ -384,6 +385,7 @@ for variable in ['6 - Temperature - upper_pred','6 - Precipitation - upper_pred'
         for did, group in df_ndf.groupby("doc_id"):
             ndf.loc[ndf["index"].isin(group["ndf_id"]),"n_study_prop"]+=1/group.shape[0]
 
-        df.to_csv(f'../data/study_da_{variable}_{degrees}.csv')
-        ndf.to_csv(f'../data/gridcell_studies_{variable}_{degrees}.csv')
+        df.to_csv(f'../data/study_da_{variable}_{degrees}.csv', index=False)
+        ndf.to_csv(f'../data/gridcell_studies_{variable}_{degrees}.csv', index=False)
+        df_ndf.to_csv(f'../data/study_gridcell_{variable}_{degrees}.csv', index=False)
         print(time.time()-t0)
