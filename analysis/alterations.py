@@ -54,5 +54,47 @@ def postfix_data(df):
     df.loc[df['id']==75669,'6 - 02 Air or land surface temperature changes'] = 1
     df.loc[df['id']==75669,'6 - 05 Changes in precipitation'] = 1
     df.loc[df['id']==75669,'6 - 25 Evapotranspiration'] = 1
+    
+    df.loc[df['id']==75158,'12 - Mountains, snow and ice'] = 1
+    
+    df.loc[df['id']==365418, '12 - Mountains, snow and ice'] = 0
+    df.loc[df['id']==5655, '4 - 32 Permafrost'] = 0
+    df.loc[df['id']==223212, '4 - 34 Glacier retreat'] = 1
+    df.loc[df['id']==2320760, '4 - 34 Glacier retreat'] = 1
+    df.loc[df['id']==592332,'4 - 56 Terrestrial carbon cycle'] = 1
+    df.loc[df['id']==592332,'4 - 57 Biogeochemical flows (Terrestrial and freshwater)'] = 1
+    df.loc[df['id']==232384, '4 - 32 Permafrost'] = 1
+    df.loc[df['id']==733885, '4 - 30 Snow'] = 1
+    df.loc[df['id']==632426, '4 - 33 Sea ice retreat'] = 1
+    df.loc[df['id']==167922, '12 - Mountains, snow and ice'] = 1
+    df.loc[df['id']==719948, '4 - 33 Sea ice retreat'] = 1
+    df.loc[df['id']==68861, '12 - Mountains, snow and ice'] = 1
+    df.loc[df['id']==601022, '12 - Mountains, snow and ice'] = 1
+    df.loc[df['id']==3314964, '4 - 33 Sea ice retreat'] = 1
+    
+    df.loc[df['id']==465680, '12 - Coastal and marine Ecosystems'] = 1
+    df.loc[df['id']==708887, '12 - Coastal and marine Ecosystems'] = 1
+    df.loc[df['id']==411770, '12 - Coastal and marine Ecosystems'] = 1
+    df.loc[df['id']==739948, '4 - 39 Changes in fisheries output/catch (potential)'] = 1
+    df.loc[df['id']==1534275, '4 - 50 Other (marine & coastal)'] = 1
+    
+    df.loc[df['id']==743097, '4 - 40 Changes in warm water corals'] = 1
+    df.loc[df['id']==2340588, '4 - 47 Seagrass'] = 1
+    df.loc[df['id']==1895132,'4 - 36 Species distribution (marine & coastal)'] = 1
+    
+    df.loc[df['id']==105531,'4 - 37 Shifts in phenology (marine & coastal)'] = 0
+    df.loc[df['id']==105531,'4 - 52 Shifts in phenology (Terrestrial and freshwater)'] = 1
+    
+    df.loc[df['id']==209390,'4 - 37 Shifts in phenology (marine & coastal)'] = 0
+    
+    df.loc[df['id']==197307, '4 - 42 Species abundance (marine & coastal)'] = 0
+    df.loc[df['id']==197307, '4 - 44 Biodiversity effects (marine & coastal)'] = 0 
+    df.loc[df['id']==197307, '4 - 51 Distribution and range shifts (Terrestrial and freshwater)'] = 0
+    df.loc[df['id']==197307, '4 - 55 Community composition and interaction'] = 0
+    
+    df.loc[df['id']==293480, '12 - Coastal and marine Ecosystems'] = 1
+    
+    df.loc[df['id']==2317280, 'relevant'] = 0
+
 
     return df

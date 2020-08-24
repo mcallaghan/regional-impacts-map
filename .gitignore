@@ -1,6 +1,7 @@
 analysis/cache_dir/*
 analysis/outputs/*
 analysis/runs/*
+*__pycache__*
 literature_identification/jupyter-google*
 *~lock*
 data/*
