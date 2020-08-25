@@ -90,7 +90,7 @@ def match_shp_da(shpfile, ndf, shpfile_name, shp_ndf_df):
     return shpfile, shp_ndf_df
 
 # Load predictions
-df = pd.read_csv('../data/category_predictions.csv')
+df = pd.read_csv('../data/1_predicted_category_documents.csv')
 
 # Load locations
 places = pd.read_csv('../data/place_df.csv')
@@ -99,9 +99,10 @@ places = places.drop_duplicates(["doc_id","geonameid"])
 for variable in ['6 - Temperature - upper_pred','6 - Precipitation - upper_pred',"all"]:
     print(f"merging data for {variable}")
 
-    df = pd.read_csv('../data/category_predictions.csv')
+    df = pd.read_csv('../data/1_predicted_category_documents.csv')
     if variable != "all":
-        df = df[df[variable]>0.5]
+        df = df[df[variable]>=0.5]
+        df = df[df["2 - Trend or climate change attribution - upper_pred"]>=0.5]
     df_places = pd.merge(df,places,left_on="id",right_on="doc_id")
 
     if "Precipitation" in variable:
@@ -192,7 +193,7 @@ for variable in ['6 - Temperature - upper_pred','6 - Precipitation - upper_pred'
         adm1shps, shp_ndf_df = match_shp_da(adm1shps, ndf, "adm1shps", shp_ndf_df)
 
         # Alternate admin1
-        shpfilename = "/home/max/Documents/resources/shpfiles/gadm36_1.shp"
+        shpfilename = "../data/d_a/gadm36_1.shp"
         adm1shps_alt = geopandas.read_file(shpfilename)
         adm1shps_alt, shp_ndf_df = match_shp_da(adm1shps_alt, ndf, "adm1shps_alt", shp_ndf_df)
 
