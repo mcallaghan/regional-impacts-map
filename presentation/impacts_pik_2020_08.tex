@@ -16,6 +16,10 @@
 \nobibliography*
 
 \usetheme{Singapore}
+
+\setbeamercolor{block title}{bg=structure!20}
+\setbeamercolor{block body}{bg=structure!10}
+\setbeamertemplate{blocks}[rounded][shadow]
 %\usecolortheme{seahorse}
 
 \usefonttheme{professionalfonts}
@@ -54,6 +58,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Introduction
 \section{Introduction}
+
+\begin{frame}
+\tableofcontents[currentsection]
+\end{frame}
 
 \begin{frame}{Context}
 
@@ -123,7 +131,7 @@ There are hundreds of thousands of documents potentially relevant to observed cl
 
 
 
-\begin{frame}{Distribution of labour between humans and machines}
+\begin{frame}{Distribution of labour between humans and machines - the ``Dangerous Supplement''}
 
 A human expert or a team of human experts is best placed to answer those questions for any single document, but they can't look at all potentially relevant documents
 
@@ -141,6 +149,10 @@ If this works well, we can predict, with some uncertainty, how much evidence the
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Data
 \section{Data collection}
+
+\begin{frame}
+\tableofcontents[currentsection]
+\end{frame}
 
 \begin{frame}{Building a query}
 
@@ -227,6 +239,10 @@ The ideal query should contain \textit{all} documents included in those tables, 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Machine learning
 \section{Machine learning}
+
+\begin{frame}
+\tableofcontents[currentsection]
+\end{frame}
 
 \begin{frame}{Feature space - text as data}
 
@@ -333,7 +349,7 @@ We need two types of classifiers:
 But we can fairly well distinguish between a merged attribution category, sensitivity, and detection only
 
 \begin{figure}
-	\includegraphics[width=0.6\linewidth]{../plots/prediction_models/attribution_category_confusion_recall.pdf}
+	\includegraphics[width=0.6\linewidth]{../plots/prediction_models/attribution_category_confusion_precision.pdf}
 \end{figure}
 \end{frame}
 
@@ -370,12 +386,12 @@ But we can fairly well distinguish between a merged attribution category, sensit
 		\includegraphics[width=0.7\linewidth]{../plots/process_diagram/relevant.pdf}
 	\end{figure}
 }
+%\only<2>{
+%	\begin{figure}
+%		\includegraphics[width=0.7\linewidth]{../plots/process_diagram/relevant_cats.pdf}
+%	\end{figure}
+%}
 \only<2>{
-	\begin{figure}
-		\includegraphics[width=0.7\linewidth]{../plots/process_diagram/relevant_cats.pdf}
-	\end{figure}
-}
-\only<3>{
 	\begin{figure}
 		\includegraphics[width=0.7\linewidth]{../plots/process_diagram/relevant_cats_attrib.pdf}
 	\end{figure}
@@ -423,7 +439,7 @@ We can combine this with information from our database of impacts evidence, in w
 
 \begin{itemize}
 	\item 11 out of 27 gridcells in Sudan contain a reduction in rainfall attributable to human influence on the climate
-	\item Each study referring to Sudan (as the smallest identifiable geographical entity)  and predicted to document impacts driven by precipitation refers to a place where around 41\% of the area is known to have anthropogenic changes in precipitation
+	\item Each study referring to Sudan (as the smallest identifiable geographical entity)  and predicted to document impacts driven by precipitation refers to a place where around 41\% of the gridcells are known to have anthropogenic changes in precipitation
 \end{itemize}
 \end{frame}
 
@@ -492,7 +508,7 @@ Further, impact studies on the effects of human-induced warming in Africa are co
 \end{frame}
 
 
-\begin{frame}{We are less certain about human influence on precipitation trends, but in China, Europe, Southern and Eastern Africa, and the US, the impacts of precipitation trends are frequently studied }
+\begin{frame}{We are less certain about human influence on precipitation trends, but in China, India, Europe, Southern and Eastern Africa, and the US, the impacts of precipitation trends are frequently studied }
 
 \begin{figure}
 	\includegraphics[width=\linewidth]{../plots/maps/gridcells_da_studies_precip_2_5_global.png}
@@ -523,6 +539,10 @@ In Europe, the effects of precipitation change are more frequently studied, even
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Conclusions
 \section{Conclusions}
+
+\begin{frame}
+\tableofcontents[currentsection]
+\end{frame}
 
 \begin{frame}{A growing body of literature on impacts}
 
@@ -567,7 +587,7 @@ In Europe, the effects of precipitation change are more frequently studied, even
 \begin{frame}{Conclusions}
 
 \begin{itemize}
-	\item We identify a large body of evidence about climate impacts, including [x] studies documenting impacts in areas we know are changing due to human influence on the climate
+	\item We identify a large body of evidence about climate impacts, including 17,273 studies documenting impacts in areas where we know at least a part of which are changing due to human influence on the climate (11,089 studies where the majority of gridcells show attributable trends)
 	\item What we know about the effects of a changing climate on human and natural systems does not always match with what we know about how (and where) humans are driving changes in climate variables 
 \end{itemize}
 
@@ -596,15 +616,38 @@ Additionally, we are in the process of incorporating literature from Scopus and 
 
 \begin{frame}{Summary - Scaling up assessments of regional impacts of climate change: a rapid, computer-assisted systematic map}
 
-\begin{itemize}
-	\item In a large collaborative coding exercise, we examined thousands of papers \textit{potentially} relevant to understanding observed impacts of climate change
-	\item We used machine learning to identify tens of thousands of studies \textit{likely} to be relevant.
-	\item We predicted the sector, climate driver, evidence type and location for each of these studies
-	\item We used the location and predicted climate driver to match each study with quantitative evidence on how and where human influence on the climate can be identified.
-\end{itemize}
+\begin{columns}
+	\small
+	\begin{column}{0.5\linewidth}
+		\begin{itemize}
+			\item In a large collaborative coding exercise, we examined thousands of papers \textit{potentially} relevant to understanding observed impacts of climate change
+			\item We used machine learning to identify tens of thousands of studies \textit{likely} to be relevant.
+			\item We predicted the sector, climate driver, evidence type and location for each of these studies
+			\item We used the location and predicted climate driver to synthesise this information with existing quantitative Detection and Attribution knowledge.
+		\end{itemize}
+	\end{column}
+
+	\begin{column}{0.5\linewidth}
+		
+		\begin{block}{Takeaways}
+			\begin{itemize}
+				\item Machine learning can inform and support global environmental assessments
+				\item We have lots of evidence of observed impacts of climate change, including 17,000 studies documenting impacts in areas we know are changing due to human influence on the climate
+				\item What we know about the effects of a changing climate on human and natural systems does not always match with what we know about how (and where) humans are driving changes in climate variables 
+			\end{itemize}
+		\end{block}
+		
+	\end{column}
+\end{columns}
+
+
 
 \begin{center}
 	\line(1,0){250}
+	
+	\medskip
+	
+	\textbf{Thanks!}
 	
 	\medskip
 	
