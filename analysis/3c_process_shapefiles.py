@@ -96,7 +96,19 @@ df = pd.read_csv('../data/1_predicted_category_documents.csv')
 places = pd.read_csv('../data/place_df.csv')
 places = places.drop_duplicates(["doc_id","geonameid"])
 
-for variable in ['6 - Temperature - upper_pred','6 - Precipitation - upper_pred',"all"]:
+variables = [
+    '6 - Temperature - upper_pred','6 - Temperature - mean_prediction','6 - Temperature - lower_pred',
+    '6 - Precipitation - upper_pred','6 - Precipitation - mean_prediction','6 - Precipitation - lower_pred',
+    "12 - Terrestrial ES - mean_prediction", "12 - Terrestrial ES - mean_prediction", "12 - Terrestrial ES - mean_prediction",
+    "12 - Coastal and marine Ecosystems - mean_prediction", "12 - Coastal and marine Ecosystems - mean_prediction", "12 - Coastal and marine Ecosystems - mean_prediction",
+    "12 - Mountains, snow and ice - mean_prediction", "12 - Mountains, snow and ice - mean_prediction", "12 - Mountains, snow and ice - mean_prediction",
+    "12 - Rivers, lakes, and soil moisture - mean_prediction", "12 - Rivers, lakes, and soil moisture - mean_prediction", "12 - Rivers, lakes, and soil moisture - mean_prediction",
+    "12 - Human and managed - mean_prediction", "12 - Human and managed - mean_prediction", "12 - Human and managed - mean_prediction"
+    'all',
+]
+
+
+for variable in variables:
     print(f"merging data for {variable}")
 
     df = pd.read_csv('../data/1_predicted_category_documents.csv')
@@ -139,7 +151,7 @@ for variable in ['6 - Temperature - upper_pred','6 - Precipitation - upper_pred'
 
         da_dataset = da_dataset.reset_index().rename(columns={"LON37_108": "LON"})
 
-    for degrees in [2.5, 1]:#, .25]:
+    for degrees in [2.5, 1]:# .25]:
         t0 = time.time()
         print(f"merging datasets for a grid with {degrees} degree cells")
         LON = np.linspace(-180+degrees*0.5,180-degrees*0.5,int(360/degrees))
@@ -254,6 +266,19 @@ for variable in ['6 - Temperature - upper_pred','6 - Precipitation - upper_pred'
         ] = ["San Francisco Plateau", "Plain"]
         geography.loc[(geography["featurecla"]=="Plain") & (geography["name"].str.contains("gange", case=False)),"name"] = "Gangetic Plain"
         geography.loc[(geography["featurecla"]=="Plain") & (geography["name"].str.contains("north china", case=False)),"name"] = "Huanghuai Pingyuan"
+        
+        
+        ##### Oceans
+        shpfilename = shpreader.natural_earth(resolution='10m',
+                                              category='physical',
+                                              name='geography_marine_polys')
+
+        ocean = geopandas.read_file(shpfilename)
+
+        ocean = ocean[pd.notna(ocean['name'])]
+
+        ocean, shp_ndf_df = match_shp_da(ocean, ndf, "ocean", shp_ndf_df)
+        ocean.head()
 
 
         # A list of combinations of studies and gridcells
@@ -270,6 +295,12 @@ for variable in ['6 - Temperature - upper_pred','6 - Precipitation - upper_pred'
             "PLAT": {"shpfile": geography, "shpfile_name": "geography", "featurecla_list": ["Plateau"]},
             "PLN": {"shpfile": geography, "shpfile_name": "geography", "featurecla_list": ["Plain"]},
             "DSRT": {"shpfile": geography, "shpfile_name": "geography", "featurecla_list": ["Desert"]},
+            "OCN": {"shpfile": ocean, "shpfile_name": "ocean", "featurecla_list": ["ocean"]},
+            "SEA": {"shpfile": ocean, "shpfile_name": "ocean", "featurecla_list": ["sea", "bay"]},
+            "GULF": {"shpfile": ocean, "shpfile_name": "ocean", "featurecla_list": ["gulf","bay"]},
+            "BAY": {"shpfile": ocean, "shpfile_name": "ocean", "featurecla_list": ["gulf","bay"]},
+            "CHN": {"shpfile": ocean, "shpfile_name": "ocean", "featurecla_list": ["channel"]},
+            "BSNU": {"shpfile": geography, "shpfile_name": "geography", "featurecla_list": ["basin"]},
             "ADM1": {"shpfile": adm1shps, "shpfile_name": "adm1shps", "featurecla_list": None},
             "PCLI": {"shpfile": adm0shps, "shpfile_name": "adm0shps", "featurecla_list": None},
         }
