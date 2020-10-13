@@ -1,6 +1,7 @@
 import django, sys, os, re
 from openpyxl import load_workbook
 from django.core.exceptions import MultipleObjectsReturned, ObjectDoesNotExist
+import pandas as pd
 
 sys.path.append('/home/max/software/django-tmv/tmv_mcc-apsis/BasicBrowser')
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "BasicBrowser.settings")
@@ -33,7 +34,7 @@ q, created = Query.objects.get_or_create(
         creator = u
 )
 
-q.doc_set.clear()
+#q.doc_set.clear()
 
 cat, created = Category.objects.get_or_create(
     project = p,
@@ -119,6 +120,8 @@ def aupy_doc(au, py, title, all_docs):
                     pass
 
         return None
+    
+doc_matches = []
 
 for ws in wb:
     system = None
@@ -164,9 +167,25 @@ for ws in wb:
                         if " " in au:
                             print(f"Couldn't match {au}, ({py}) or {au.replace(', ',' ')}, ({py})")
                         else:
-                            print(f"Couldn't match {au}, ({py})")
+                            print(f"Couldn't match {au}, ({py}). {title}")
+                           
+                    doc_id = None
+                    if doc:
+                        doc_id=doc.pk
+                        
+                    doc_matches.append({
+                        "au": au,
+                        "py": py,
+                        "doc": doc_id,
+                        "system": system,
+                        "region": region
+                    })
+                    
             else:
                 print(f"couldn't find refs in {row[1].value}")
+                
+doc_matches = pd.DataFrame.from_dict(doc_matches)
+doc_matches.to_csv('IPCC_extraction.csv')
 
 q.r_count = q.doc_set.count()
 print(q.r_count)
