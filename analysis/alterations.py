@@ -102,4 +102,23 @@ def postfix_data(df):
     df.loc[df['id']==1277171,'4 - 42 Species abundance (marine & coastal)'] = 1
     df.loc[df['id']==1277171, '4 - 36 Species distribution (marine & coastal)'] = 1
 
+    df.loc[df['id']==1894915, '4 - 64 Indigenous communities'] = 1
+
+    df.loc[df['id']==709599, '4 - 64 Indigenous communities'] = 1
+
+    df.loc[df['id']==3270379, '4 - 75 Economic activity'] = 1
+
+    df.loc[df['id']==795797, '4 - 72 Conflict'] = 1
+    df.loc[df['id']==2339354, '4 - 72 Conflict'] = 1
+
+    df.loc[df['id']==1545437, '4 - 65 Gender specific / gender unequal impacts'] = 1
+    df.loc[df['id']==779319, '4 - 65 Gender specific / gender unequal impacts'] = 1
+    df.loc[df['id']==125032, '4 - 65 Gender specific / gender unequal impacts'] = 1
+    df.loc[df['id']==1530126, '4 - 65 Gender specific / gender unequal impacts'] = 1
+    df.loc[df['id']==467895, '4 - 65 Gender specific / gender unequal impacts'] = 1
+    df.loc[df['id']==76085, '4 - 65 Gender specific / gender unequal impacts'] = 1
+
+    df.loc[df['id']==102469, '4 - 64 Indigenous communities'] = 1
+
+
     return df
