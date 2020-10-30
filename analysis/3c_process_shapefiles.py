@@ -151,7 +151,7 @@ for variable in variables:
 
         da_dataset = da_dataset.reset_index().rename(columns={"LON37_108": "LON"})
 
-    for degrees in [2.5, 1]:# .25]:
+    for degrees in [2.5]: #, 1]:# .25]:
         t0 = time.time()
         print(f"merging datasets for a grid with {degrees} degree cells")
         LON = np.linspace(-180+degrees*0.5,180-degrees*0.5,int(360/degrees))
