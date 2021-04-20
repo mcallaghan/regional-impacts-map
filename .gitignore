@@ -1,3 +1,6 @@
+analysis (copy)/*
+pr/*
+old_figures/*
 analysis/cache_dir/*
 analysis/outputs/*
 analysis/runs/*
@@ -20,3 +23,4 @@ WGIIAR5-Chap18_FINAL.pdf
 *.toc
 literature_identification/IPCC*
 *.ipynb_checkpoints*
+supplementary_data/*.csv
