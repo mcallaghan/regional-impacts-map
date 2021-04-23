@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage[a4paper, landscape, total={260mm, 180mm}]{geometry}
+\usepackage{authblk}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage[table]{xcolor}
+
+\title{Machine learning-based evidence and attribution mapping of 100,000 climate impact studies - Supplementary material}
+\author[1,2]{Max Callaghan}
+\author[3,5]{Carl-Friedrich Schleussner}
+\author[3,4]{Shruti Nath}
+\author[3]{Quentin Lejeune}
+\author[6]{Thomas R. Knutson}
+\author[7,8]{Markus Reichstein}
+\author[]{Gerrit Hansen}
+\author[3,5]{Emily Theokritoff}
+\author[3,5]{Marina Andrijevic}
+\author[3,9]{Robert Brecha}
+\author[3]{Michael Hegarty}
+\author[3]{Chelsea Jones}
+\author[3]{Kaylin Lee}
+\author[3]{Agathe Lucas}
+\author[3,5]{Nicole van Maanen}
+\author[3]{Inga Menke}
+\author[3,5]{Peter Pfleiderer}
+\author[3]{Burcu Yesil}
+\author[1,2]{Jan Minx}
+
+
+
+
+\affil[1]{Mercator Research Institute on Global Commons and Climate Change, Torgauer Straße, 10829 Berlin, Germany}
+\affil[2]{Priestley International Centre for Climate, University of Leeds, Leeds LS2 9JT, United Kingdom}
+\affil[3]{Climate Analytics, Berlin, Germany}
+\affil[4]{Institute of Atmospheric and Climate Sciences, ETH Zürich, Switzerland}
+\affil[5]{Integrative Research Institute on Transformations of Human-Environment Systems, Humboldt University, Berlin, Germany}
+\affil[6]{NOAA/Geophysical Fluid Dynamics Laboratory. Princeton, NJ, 08540, USA}
+\affil[7]{Max Planck Institute for Biogeochemistry, Department Biogeochemical Integration, D-07701 Jena, Germany}
+\affil[8]{Michael Stifel Center Jena for Data-driven and Simulation Science, Jena, Germany}
+\affil[9]{Hanley Sustainability Institute, Renewable and Clean Energy Program and Physics Dept., University of Dayton, Dayton, Ohio, USA}
+
+\date{}
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\renewcommand{\arraystretch}{1.5}
+\begin{document}
+	\maketitle
+	
+	\begin{table}
+		\rowcolors{2}{gray!10}{white}
+		\scriptsize
+		\center
+		\input{../tables/continent_sector_n_studies.tex}
+		\caption{The number of studies in each impact category and each continent}
+	\end{table}
+
+	\begin{table}
+		\rowcolors{3}{white}{gray!10}
+		\scriptsize
+		\center
+		\input{../tables/area_pop_sums.tex}
+		\caption{The percentage of land area and population with robust evidence by impact category and continent}
+	\end{table}
+
+	\begin{table}
+		\rowcolors{3}{white}{gray!10}
+		\scriptsize
+		\center
+		\input{../tables/area_pop_sums_income.tex}
+		\caption{The percentage of land area and population with robust evidence by impact category and income category}
+	\end{table}
+
+	
+\end{document}

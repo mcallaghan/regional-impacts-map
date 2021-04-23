@@ -3,16 +3,19 @@
     <tr>
       <th></th>
       <th></th>
-      <th colspan="2" halign="left">Coastal and marine Ecosystems</th>
-      <th colspan="2" halign="left">Human and managed systems</th>
-      <th colspan="2" halign="left">Mountains, snow and ice</th>
-      <th colspan="2" halign="left">Rivers, lakes, and soil moisture</th>
-      <th colspan="2" halign="left">Terrestrial ecosystems</th>
-      <th colspan="2" halign="left">Total</th>
+      <th colspan="2" halign="left">Coastal and marine Ecosystems (WS&gt;1)</th>
+      <th colspan="2" halign="left">Human and managed systems (WS&gt;1)</th>
+      <th colspan="2" halign="left">Mountains, snow and ice (WS&gt;1)</th>
+      <th colspan="2" halign="left">Rivers, lakes, and soil moisture (WS&gt;1)</th>
+      <th colspan="2" halign="left">Terrestrial ecosystems (WS&gt;1)</th>
+      <th colspan="2" halign="left">Other systems (WS&gt;1)</th>
+      <th colspan="2" halign="left">Total (WS&gt;5)</th>
     </tr>
     <tr>
       <th></th>
       <th></th>
+      <th>area</th>
+      <th>population</th>
       <th>area</th>
       <th>population</th>
       <th>area</th>
@@ -41,6 +44,8 @@
       <td>33% (14%-68%)</td>
       <td>63% (38%-64%)</td>
       <td>77% (67%-81%)</td>
+      <td>45% (11%-64%)</td>
+      <td>63% (27%-81%)</td>
       <td>52% (18%-63%)</td>
       <td>75% (46%-81%)</td>
     </tr>
@@ -56,6 +61,8 @@
       <td>15% (5%-19%)</td>
       <td>36% (29%-36%)</td>
       <td>19% (17%-19%)</td>
+      <td>28% (8%-36%)</td>
+      <td>17% (7%-19%)</td>
       <td>33% (12%-36%)</td>
       <td>19% (13%-19%)</td>
     </tr>
@@ -72,6 +79,8 @@
       <td>60% (41%-69%)</td>
       <td>70% (61%-70%)</td>
       <td>70% (64%-72%)</td>
+      <td>58% (32%-71%)</td>
+      <td>72% (58%-72%)</td>
       <td>62% (55%-70%)</td>
       <td>70% (69%-72%)</td>
     </tr>
@@ -87,6 +96,8 @@
       <td>28% (28%-28%)</td>
       <td>21% (16%-21%)</td>
       <td>28% (28%-28%)</td>
+      <td>16% (11%-21%)</td>
+      <td>28% (27%-28%)</td>
       <td>17% (16%-21%)</td>
       <td>28% (28%-28%)</td>
     </tr>
@@ -103,6 +114,8 @@
       <td>44% (18%-68%)</td>
       <td>40% (22%-51%)</td>
       <td>71% (46%-79%)</td>
+      <td>35% (15%-52%)</td>
+      <td>64% (26%-79%)</td>
       <td>32% (24%-41%)</td>
       <td>66% (51%-75%)</td>
     </tr>
@@ -118,6 +131,8 @@
       <td>4% (2%-7%)</td>
       <td>7% (3%-20%)</td>
       <td>4% (2%-9%)</td>
+      <td>9% (2%-23%)</td>
+      <td>6% (2%-8%)</td>
       <td>6% (2%-12%)</td>
       <td>4% (2%-6%)</td>
     </tr>
@@ -134,6 +149,8 @@
       <td>77% (64%-86%)</td>
       <td>35% (28%-56%)</td>
       <td>88% (83%-95%)</td>
+      <td>29% (21%-45%)</td>
+      <td>85% (73%-93%)</td>
       <td>28% (25%-34%)</td>
       <td>83% (78%-90%)</td>
     </tr>
@@ -151,6 +168,8 @@
       <td>0% (0%-0%)</td>
       <td>0% (0%-1%)</td>
       <td>0% (0%-0%)</td>
+      <td>0% (0%-1%)</td>
+      <td>0% (0%-0%)</td>
     </tr>
     <tr>
       <th rowspan="2" valign="top">Asia</th>
@@ -165,6 +184,8 @@
       <td>75% (50%-81%)</td>
       <td>71% (60%-81%)</td>
       <td>80% (72%-83%)</td>
+      <td>73% (51%-83%)</td>
+      <td>80% (73%-84%)</td>
       <td>70% (60%-76%)</td>
       <td>80% (78%-82%)</td>
     </tr>
@@ -180,6 +201,8 @@
       <td>15% (15%-15%)</td>
       <td>6% (4%-7%)</td>
       <td>15% (14%-15%)</td>
+      <td>6% (5%-7%)</td>
+      <td>15% (15%-15%)</td>
       <td>5% (5%-6%)</td>
       <td>15% (15%-15%)</td>
     </tr>
@@ -196,6 +219,8 @@
       <td>53% (43%-82%)</td>
       <td>84% (79%-86%)</td>
       <td>77% (74%-92%)</td>
+      <td>86% (73%-86%)</td>
+      <td>89% (61%-91%)</td>
       <td>84% (74%-86%)</td>
       <td>84% (75%-92%)</td>
     </tr>
@@ -209,6 +234,8 @@
       <td>4% (4%-4%)</td>
       <td>14% (1%-14%)</td>
       <td>5% (4%-5%)</td>
+      <td>14% (14%-14%)</td>
+      <td>5% (5%-5%)</td>
       <td>14% (14%-14%)</td>
       <td>5% (5%-5%)</td>
       <td>14% (14%-14%)</td>
@@ -227,6 +254,8 @@
       <td>62% (40%-75%)</td>
       <td>53% (41%-62%)</td>
       <td>75% (63%-81%)</td>
+      <td>49% (29%-63%)</td>
+      <td>75% (59%-82%)</td>
       <td>48% (37%-56%)</td>
       <td>74% (67%-80%)</td>
     </tr>
@@ -241,6 +270,8 @@
       <td>9% (3%-12%)</td>
       <td>11% (10%-12%)</td>
       <td>12% (9%-15%)</td>
+      <td>12% (11%-13%)</td>
+      <td>11% (5%-16%)</td>
       <td>12% (11%-13%)</td>
       <td>10% (6%-13%)</td>
       <td>12% (11%-12%)</td>

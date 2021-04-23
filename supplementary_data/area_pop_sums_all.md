@@ -3,16 +3,40 @@
     <tr>
       <th></th>
       <th></th>
+      <th colspan="2" halign="left">Coastal and marine Ecosystems (WS&gt;0)</th>
+      <th colspan="2" halign="left">Human and managed systems (WS&gt;0)</th>
+      <th colspan="2" halign="left">Mountains, snow and ice (WS&gt;0)</th>
+      <th colspan="2" halign="left">Rivers, lakes, and soil moisture (WS&gt;0)</th>
+      <th colspan="2" halign="left">Terrestrial ecosystems (WS&gt;0)</th>
+      <th colspan="2" halign="left">Other systems (WS&gt;0)</th>
+      <th colspan="2" halign="left">Total (WS&gt;0)</th>
       <th colspan="2" halign="left">Coastal and marine Ecosystems</th>
       <th colspan="2" halign="left">Human and managed systems</th>
       <th colspan="2" halign="left">Mountains, snow and ice</th>
       <th colspan="2" halign="left">Rivers, lakes, and soil moisture</th>
       <th colspan="2" halign="left">Terrestrial ecosystems</th>
+      <th colspan="2" halign="left">Other systems</th>
       <th colspan="2" halign="left">Total</th>
     </tr>
     <tr>
       <th></th>
       <th></th>
+      <th>area</th>
+      <th>population</th>
+      <th>area</th>
+      <th>population</th>
+      <th>area</th>
+      <th>population</th>
+      <th>area</th>
+      <th>population</th>
+      <th>area</th>
+      <th>population</th>
+      <th>area</th>
+      <th>population</th>
+      <th>area</th>
+      <th>population</th>
+      <th>area</th>
+      <th>population</th>
       <th>area</th>
       <th>population</th>
       <th>area</th>
@@ -31,6 +55,22 @@
     <tr>
       <th rowspan="2" valign="top">South America</th>
       <th>D&amp;A</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>64%</td>
+      <td>81%</td>
       <td>64%</td>
       <td>81%</td>
       <td>64%</td>
@@ -46,6 +86,22 @@
     </tr>
     <tr>
       <th>Other</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>36%</td>
+      <td>19%</td>
       <td>36%</td>
       <td>19%</td>
       <td>36%</td>
@@ -62,6 +118,22 @@
     <tr>
       <th rowspan="2" valign="top">North America</th>
       <th>D&amp;A</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>71%</td>
+      <td>72%</td>
       <td>71%</td>
       <td>72%</td>
       <td>71%</td>
@@ -77,6 +149,22 @@
     </tr>
     <tr>
       <th>Other</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>29%</td>
+      <td>28%</td>
       <td>29%</td>
       <td>28%</td>
       <td>29%</td>
@@ -93,6 +181,22 @@
     <tr>
       <th rowspan="2" valign="top">Africa</th>
       <th>D&amp;A</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>73%</td>
+      <td>89%</td>
       <td>73%</td>
       <td>89%</td>
       <td>73%</td>
@@ -108,6 +212,22 @@
     </tr>
     <tr>
       <th>Other</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>27%</td>
+      <td>11%</td>
       <td>27%</td>
       <td>11%</td>
       <td>27%</td>
@@ -124,6 +244,22 @@
     <tr>
       <th rowspan="2" valign="top">Europe</th>
       <th>D&amp;A</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>95%</td>
+      <td>100%</td>
       <td>95%</td>
       <td>100%</td>
       <td>95%</td>
@@ -139,6 +275,22 @@
     </tr>
     <tr>
       <th>Other</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>5%</td>
+      <td>0%</td>
       <td>5%</td>
       <td>0%</td>
       <td>5%</td>
@@ -155,6 +307,22 @@
     <tr>
       <th rowspan="2" valign="top">Asia</th>
       <th>D&amp;A</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>93%</td>
+      <td>85%</td>
       <td>93%</td>
       <td>85%</td>
       <td>93%</td>
@@ -170,6 +338,22 @@
     </tr>
     <tr>
       <th>Other</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>7%</td>
+      <td>15%</td>
       <td>7%</td>
       <td>15%</td>
       <td>7%</td>
@@ -186,6 +370,22 @@
     <tr>
       <th rowspan="2" valign="top">Oceania</th>
       <th>D&amp;A</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>86%</td>
+      <td>95%</td>
       <td>86%</td>
       <td>95%</td>
       <td>86%</td>
@@ -201,6 +401,22 @@
     </tr>
     <tr>
       <th>Other</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>14%</td>
+      <td>5%</td>
       <td>14%</td>
       <td>5%</td>
       <td>14%</td>
@@ -217,6 +433,22 @@
     <tr>
       <th rowspan="2" valign="top">Global</th>
       <th>D&amp;A</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>80%</td>
+      <td>87%</td>
       <td>80%</td>
       <td>87%</td>
       <td>80%</td>
@@ -232,6 +464,22 @@
     </tr>
     <tr>
       <th>Other</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>20%</td>
+      <td>13%</td>
       <td>20%</td>
       <td>13%</td>
       <td>20%</td>
