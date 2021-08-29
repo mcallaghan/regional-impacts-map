@@ -1,0 +1,76 @@
+Broad category,Specific category,Aggregated category
+Physical systems,01 CO2 concentration,-
+Physical systems,02 Air or land surface temperature changes,-
+Physical systems,03 Extreme temperature,-
+Physical systems,04 Radiation,-
+Physical systems,05 Changes in precipitation,-
+Physical systems,06 Humidity,-
+Physical systems,07 Aridity/dryness,-
+Physical systems,08 Changes in strong precipitation,-
+Physical systems,09 Atmospheric/marine circulation or teleconnections,-
+Physical systems,10 Wind speed,-
+Physical systems,12 Seasonality,-
+Physical systems,13 Other (physical systems),-
+Physical systems,14 Sea level change,-
+Physical systems,15 Coastal flooding,-
+Physical systems,16 Sea surface temperature,-
+Physical systems,17 Ocean acidification,-
+Physical systems,19 Water quality/chemistry (oceans),-
+"Mountains, snow and ice",30 Snow,Cryosphere
+"Mountains, snow and ice",31 Landslides/instability,Cryosphere
+"Mountains, snow and ice",32 Permafrost,Cryosphere
+"Mountains, snow and ice",33 Sea ice retreat,Cryosphere
+"Mountains, snow and ice",34 Glacier retreat,Cryosphere
+"Rivers, lakes, and soil moisture",21 Water temperature (freshwater),Terrestrial Water Cycle
+"Rivers, lakes, and soil moisture",22 Water quality/chemistry (freshwater),Terrestrial Water Cycle
+"Rivers, lakes, and soil moisture",23 Soil moisture,Terrestrial Water Cycle
+"Rivers, lakes, and soil moisture","24 Water level (lake, reservoir, groundwater)",Terrestrial Water Cycle
+"Rivers, lakes, and soil moisture",25 Evapotranspiration,Terrestrial Water Cycle
+"Rivers, lakes, and soil moisture",26 Drought frequency and intensity,Drought & Floods
+"Rivers, lakes, and soil moisture",27 River floods,Drought & Floods
+"Rivers, lakes, and soil moisture",28 River runoff,Terrestrial Water Cycle
+"Rivers, lakes, and soil moisture","29 Other (Rivers, lakes and soil moisture)",Terrestrial Water Cycle
+Coastal and marine Ecosystems,36 Species distribution (marine & coastal),Coastal and marine Ecosystems
+Coastal and marine Ecosystems,37 Shifts in phenology (marine & coastal),Coastal and marine Ecosystems
+Coastal and marine Ecosystems,38 Geographical shift (marine & coastal),Coastal and marine Ecosystems
+Coastal and marine Ecosystems,40 Changes in warm water corals,Coastal and marine Ecosystems
+Coastal and marine Ecosystems,41 Species metabolism (marine & coastal),Coastal and marine Ecosystems
+Coastal and marine Ecosystems,42 Species abundance (marine & coastal),Coastal and marine Ecosystems
+Coastal and marine Ecosystems,43 Biome shift (marine & coastal),Coastal and marine Ecosystems
+Coastal and marine Ecosystems,44 Biodiversity effects (marine & coastal),Coastal and marine Ecosystems
+Coastal and marine Ecosystems,45 Ocean ecosystem productivity,Coastal and marine Ecosystems
+Coastal and marine Ecosystems,46 Changes in kelp forests,Coastal and marine Ecosystems
+Coastal and marine Ecosystems,47 Seagrass,Coastal and marine Ecosystems
+Coastal and marine Ecosystems,48 Carbon cycle (marine & coastal),Coastal and marine Ecosystems
+Coastal and marine Ecosystems,50 Other (marine & coastal),Coastal and marine Ecosystems
+Terrestrial ES,51 Distribution and range shifts (Terrestrial and freshwater),Terrestrial ES
+Terrestrial ES,52 Shifts in phenology (Terrestrial and freshwater),Terrestrial ES
+Terrestrial ES,53 Mortality and growth,Terrestrial ES
+Terrestrial ES,54 Physiology and metabolism,Terrestrial ES
+Terrestrial ES,55 Community composition and interaction,Terrestrial ES
+Terrestrial ES,56 Terrestrial carbon cycle,Terrestrial ES
+Terrestrial ES,57 Biogeochemical flows (Terrestrial and freshwater),Terrestrial ES
+Terrestrial ES,58 Pests and diseases,Terrestrial ES
+Terrestrial ES,59 Wildfires,Wildfires
+Terrestrial ES,60 Other (Terrestrial and freshwater),Terrestrial ES
+Human and managed,39 Changes in fisheries output/catch (potential),Food/Agriculture
+Human and managed,61 Arctic infrastructure,Livelihoods and wellbeing
+Human and managed,62 Coastal human systems,Livelihoods and wellbeing
+Human and managed,63 Human Settlements,Livelihoods and wellbeing
+Human and managed,64 Indigenous communities,Livelihoods and wellbeing
+Human and managed,65 Gender specific / gender unequal impacts,Livelihoods and wellbeing
+Human and managed,66 Health,Health
+Human and managed,67 Vector-borne diseases,Health
+Human and managed,68 Extreme heat exposure,Health
+Human and managed,69 Crop yields,Food/Agriculture
+Human and managed,70 Food prices,Food/Agriculture
+Human and managed,71 Malnutrition,Food/Agriculture
+Human and managed,72 Conflict,Livelihoods and wellbeing
+Human and managed,73 Displacement and migration,Displacement and migration
+Human and managed,75 Economic activity,Livelihoods and wellbeing
+Human and managed,76 Human water use,-
+Human and managed,77 Land use change,-
+Human and managed,78 Land management,Food/Agriculture
+Human and managed,79 Livestock health,Food/Agriculture
+Human and managed,80 Livestock management,Food/Agriculture
+Human and managed,81 Other (human and managed systems),-
