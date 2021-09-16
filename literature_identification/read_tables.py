@@ -42,7 +42,7 @@ cat, created = Category.objects.get_or_create(
     description = "not included in table"
 )
 
-all_docs = Doc.objects.filter(docproject__project=p).exclude(category=cat)
+all_docs = Doc.objects.filter(docproject__project=178).exclude(category=cat)
 
 def extract_refs(s):
     refs = None
@@ -107,7 +107,7 @@ def aupy_doc(au, py, title, all_docs):
         # Try once more with doi
         a1 = re.split(',| and ',au.strip())[0].replace(' ','')
         bib_key = f"{a1}{py}"
-        e = [e for e in bib_database.entries if e['ID']==bib_key]
+        e = [e for e in bib_database.entries if bib_key in e['ID']]
         if len(e)==1:
             if "doi" in e[0]:
                 try:
@@ -146,11 +146,13 @@ for ws in wb:
                 for au, py in refs:
                     doc = None
                     title = None
-                    if len(py) > 4:
+                    if len(py) > 3:
                         a1 = re.split('\W',au.strip())[0]
                         bib_key = f"{a1}{py}"
-                        e = [e for e in bib_database.entries if e['ID']==bib_key][0]
-                        title = e['title'].strip('{}')
+                        bibms = [e for e in bib_database.entries if bib_key in e['ID']]
+                        if len(bibms)==1:
+                            e = bibms[0]
+                            title = e['title'].strip('{}')
 
                     py = py[:4]
                     au = re.split('\Wet',au)[0].strip(', ')
@@ -158,14 +160,14 @@ for ws in wb:
                     doc = aupy_doc(au, py, title, all_docs)
                     if not doc:
                         if " " in au:
-                            au = au.replace(' ',', ')
-                            doc = aupy_doc(au, py, title, all_docs)
+                            a1 = re.split('\W',au.strip())[0]
+                            doc = aupy_doc(a1, py, title, all_docs)
                     if doc:
                         doc.query.add(q)
                         doc.category.add(syscat)
                     else:
                         if " " in au:
-                            print(f"Couldn't match {au}, ({py}) or {au.replace(', ',' ')}, ({py})")
+                            print(f"Couldn't match {au}, ({py}) or {a1}, ({py}) - {title}")
                         else:
                             print(f"Couldn't match {au}, ({py}). {title}")
                            
