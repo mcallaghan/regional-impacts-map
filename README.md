@@ -4,3 +4,4 @@ A short explanation of the paper with interactive versions of the main figures i
 
 The scripts which attribute trends in temperature and precipitation to changes in are located in `detection_and_attribution/`, while the scripts used to produce the paper's figures are available in `analysis/`
 
+A preprint of the version submitted to Nature Climate Change is available on [Research Square](https://www.researchsquare.com/article/rs-783398/v1)
